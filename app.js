@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
 //   encryptedFields: ['password']
 // });
 
-//level - 3
+//environment variable
 userSchema.plugin(encrypt, {secret: process.env.SECRET,encryptedFields: ['password'] })
 
 const User = new mongoose.model("User", userSchema);
